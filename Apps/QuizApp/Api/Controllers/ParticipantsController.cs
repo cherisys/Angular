@@ -28,7 +28,7 @@ namespace Api.Controllers
         }
 
         [HttpGet("{id}", Name = "GetParticipant")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(long id)
         {
             var item = await Repo.GetById(id);
             if (item == null)
