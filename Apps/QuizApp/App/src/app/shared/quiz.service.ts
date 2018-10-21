@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class QuizService {
 
   //---------------PROPERTIES------------------
-  readonly rootURL = "http://localhost:5000";
+  readonly rootURL = "http://localhost:39479";
   reqHeader = new HttpHeaders({'user-key':'UserKey1'});
   qns: any[];
   seconds: number;
@@ -37,7 +37,6 @@ export class QuizService {
     var body = JSON.parse(localStorage.getItem('participant'));
     body.score = this.correctAnswersCount;
     body.timeSpent = this.seconds;
-    console.log(body);
     return this.http.put(this.rootURL + '/api/Participants',body,{headers:this.reqHeader});
   }
 

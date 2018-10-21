@@ -56,6 +56,7 @@ namespace Api.Controllers
             {
                 return BadRequest();
             }
+            
             await Repo.Update(item);
             return NoContent();
         }

@@ -4,6 +4,6 @@ namespace Api.Global
 {
     public abstract class EntityBase
     {
-        public Int64 Id { get; protected set; }
+        public Int64 Id { get; set; }
     }
 }
