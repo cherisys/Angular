@@ -49,5 +49,15 @@ namespace Api.Controllers
             return CreatedAtRoute("GetParticipant", new { Controller = "Participants", id = item.Id }, item);
         }
 
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] Participant item)
+        {
+            if (item == null)
+            {
+                return BadRequest();
+            }
+            await Repo.Update(item);
+            return NoContent();
+        }
     }
 }

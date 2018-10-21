@@ -35,7 +35,7 @@ namespace Api.Global
 
         public async Task<IEnumerable<T>> GetAll()
         {
-            return await _dbSet.ToListAsync();
+            return await  _dbSet.ToListAsync();
         }
 
         public async Task<T> GetById(long Id)
