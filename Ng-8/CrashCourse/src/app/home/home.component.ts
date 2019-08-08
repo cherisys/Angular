@@ -18,10 +18,9 @@ export class HomeComponent implements OnInit {
 
   firstClick(){
     this.h1Style = true;
-    this.data.firstClick().subscribe(data=> {
-      this.users = data;
-      console.log(this.users);
-
+    this.data.firstClick().subscribe(udata=> {
+      this.users = udata['data'];
+    
 //  Returned Data Object
 //       {data: Array(3) [ {…}, {…}, {…} ],
 // ​       page: 1,

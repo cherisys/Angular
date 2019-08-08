@@ -3,7 +3,7 @@
 <div style="width:100%">
     <div style="width:40%;display:inline-block;">
         <ul *ngIf="users">
-            <li *ngFor="let user of users.data">
+            <li *ngFor="let user of users">
                 <img [src]="user.avatar">
                 <p>{{user.first_name}} {{user.last_name}}</p>
             </li>
